@@ -1,0 +1,37 @@
+.container
+  .row.mt-5.justify-content-center
+    .d-none.d-sm-block.col-sm-5
+      .cellphone
+        = image_tag 'instagram_home_landing.jpg', class: 'cellphone-inside'
+    .col-sm-4
+      .row
+        .col-sm-12
+          .card.p-4
+            .row
+              .col-sm-12.text-center
+                = image_tag 'instagram_logo.png', class: 'login-logo'
+            .row.mt-3.justify-content-center
+              .col-sm-9
+                .subtitle='Sign in to see photos and videos from your friends.'
+            .row.mt-3
+              .col-sm-12
+                = link_to '#', class: 'btn btn-block btn-fb btn-sm' do
+                  %i.fab.fa-facebook
+                  Login with Facebook
+            = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              .form-group.mt-3
+                = f.email_field :email, class:'form-control', autofocus: true, placeholder: 'Email'
+                .form-group
+                = f.password_field :password, autocomplete: "off", class:'form-control', placeholder: 'Password'
+              .actions
+                = f.submit "Log in", class: 'btn btn-block btn-fb btn-sm'
+      .row.mt-4
+        .col-sm-12
+          .card.p-4.text-center
+            %span
+              Don't have an account?
+              = link_to 'Sign up'
+      .row.mt-4
+        .col-sm-12.text-center
+          %span
+            Get the app.

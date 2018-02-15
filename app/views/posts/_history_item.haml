@@ -1,0 +1,6 @@
+.history
+  .user-history
+    = image_tag avatar, class: 'rounded-circle history-user-avatar'
+    - if add_icon
+      .new-history='+'
+  .user-title= subtitle || 'Your Story'

@@ -1,0 +1,35 @@
+.post
+  .row.no-gutters.p-2
+    .col-1.col-sm-1.text-left
+      = image_tag post2.user.avatar.url, class: 'rounded-circle avatar mt-2'
+    .col-10.col-sm-10
+      .pl-2
+        .post-username= post2.user.profile&.username
+        .post-location= 'La candelaria'
+    .col-1.col-sm-1.pt-2.text-right
+      %i.fas.fa-ellipsis-h
+  .row
+    .col-sm-12
+      = image_tag 'https://kidventurous.com/wp-content/uploads/2014/09/paris-skyline-square1.png', class: 'image-hackgram'
+  .row.p-2
+    .col-sm-12
+      %span.py-2.pr-3
+        %i.far.fa-heart.fa-2x
+      %span.py-2.pr-3
+        %i.far.fa-comment.fa-2x
+      %span.py-2.pr-3
+        %i.far.fa-paper-plane.fa-2x
+  .row
+    .col-sm-12
+      .px-2.py-1
+        %b.username-text= post2.user.profile&.username
+        %span= post2.description
+  .row
+    .col-sm-12
+      .px-2.py-1
+        %b.username-text= 'pedroperez'
+        %span= 'Yo opino que chao mundo'
+  .row.p-2.new-comment
+    .col-sm-12
+      .px-2.py-1
+        %input{ type: 'text', placeholder: 'Agregar comentario', class: 'simple-input'}
